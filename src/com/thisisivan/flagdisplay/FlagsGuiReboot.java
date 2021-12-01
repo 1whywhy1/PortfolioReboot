@@ -31,11 +31,7 @@ public class FlagsGuiReboot extends JFrame implements ActionListener {
 
         this.welcomePage = welcomePage;
 
-        URL url = this.getClass().getResource("Images/india.png");
-        JOptionPane.showMessageDialog(null,url);
-        india = new ImageIcon(url);
-
-
+        india = new ImageIcon(getClass().getResource("Images/india.png"));
         australia = new ImageIcon(getClass().getResource("Images/australia.png"));
         china = new ImageIcon(getClass().getResource("Images/china.png"));
         nz = new ImageIcon(getClass().getResource("Images/newZealand.png"));
