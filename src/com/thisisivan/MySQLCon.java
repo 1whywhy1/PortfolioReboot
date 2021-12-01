@@ -20,7 +20,7 @@ public class MySQLCon {
     public static String dbUsername;
     public static String dbPassword;
     public static String connectionString;
-    private static boolean  newCred = true;
+    private static boolean  newCred = false;
 
 
     static {
