@@ -1,0 +1,6 @@
+StudentID ;First name ; Last name ; Course code;Course name
+1001;Will;Smith;ICT20115;Cert II in IT
+1002;Jennifer;Aniston;ICT20115;Cert II in IT
+1003;Arnold;Schwarzenegger;ICT30115;Cert III in IT - web design
+1004;Clark;Kent;ICT30115;Cert III in IT - web design
+1005;Dennis;Mitchell;ICT40115;Cert IV in IT - programming
