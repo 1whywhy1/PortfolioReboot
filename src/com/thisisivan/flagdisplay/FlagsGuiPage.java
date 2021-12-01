@@ -28,11 +28,17 @@ public class FlagsGuiPage extends JFrame implements ActionListener {
     public FlagsGuiPage(WelcomePage welcomePage) {
 
         this.welcomePage = welcomePage;
-        india = new ImageIcon(getClass().getResource("/images/india.png"));
-        australia = new ImageIcon(getClass().getResource("/images/australia.png"));
-        china = new ImageIcon(getClass().getResource("/images/china.png"));
-        nz = new ImageIcon(getClass().getResource("/images/newZealand.png"));
-        russia = new ImageIcon(getClass().getResource("/images/russia.png"));
+//        india = new ImageIcon(getClass().getResource("/images/india.png"));
+//        australia = new ImageIcon(getClass().getResource("/images/australia.png"));
+//        china = new ImageIcon(getClass().getResource("/images/china.png"));
+//        nz = new ImageIcon(getClass().getResource("/images/newZealand.png"));
+//        russia = new ImageIcon(getClass().getResource("/images/russia.png"));
+
+        india = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\india.png");
+        australia = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\australia.png");
+        china = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\china.png");
+        nz = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\newZealand.png");
+        russia = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\russia.png");
 
         //region CloseOperation
         // Set Closing Operation and add listener to open a confirmation window.

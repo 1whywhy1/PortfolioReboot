@@ -21,6 +21,7 @@ public class Serializer {
 
         try {
             user = new User(username, password, firstName, lastName, userType, email);
+
             String exactFilePath = WriteToFile.GetPathToFile(WriteAs.ser);
 
             if (exactFilePath != null) {

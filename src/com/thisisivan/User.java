@@ -140,10 +140,8 @@ public class User extends Credentials{
             setPassword(password);
             setFirstName(firstName);
             setLastName(lastName);
-            setDOB(DOB);
             setUserType(userType);
             setEmail(email);
-            //createdOn()
         }
         catch (Exception e)
         {

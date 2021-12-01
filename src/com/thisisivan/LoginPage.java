@@ -30,7 +30,6 @@ public class LoginPage extends JFrame implements ActionListener {
     //region Set up logger
     static {
         logger = MyLogger.SetupLogger("LoginLog", System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Logs\\LoginLog.log");
-        //System.out.println(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\LoginLog.log");
 
     }
     //endregion
