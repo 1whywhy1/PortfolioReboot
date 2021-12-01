@@ -5,42 +5,44 @@ import com.thisisivan.WelcomePage;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.net.URL;
+import java.net.URLDecoder;
 
-public class FlagsGuiPage extends JFrame implements ActionListener {
-
+public class FlagsGuiReboot extends JFrame implements ActionListener {
     //region Variables
     private JPanel pnlMain;
+    private JPanel headerPanel;
     private JRadioButton rbtIndia;
     private JRadioButton rbtAustralia;
     private JRadioButton rbtChina;
     private JRadioButton rbtNZ;
-    private JLabel lblPicture;
     private JRadioButton rbtRussia;
-    private JPanel headerPanel;
     private JButton backButton;
+    private JLabel lblPicture;
+    private JLabel countyName;
+
     private ImageIcon india, australia, china, nz, russia;
     WelcomePage welcomePage;
     //endregion
 
     //region Constructors
-    public FlagsGuiPage(){}
-
-    public FlagsGuiPage(WelcomePage welcomePage) {
+    public FlagsGuiReboot(){}
+    public FlagsGuiReboot(WelcomePage welcomePage) {
 
         this.welcomePage = welcomePage;
-//        india = new ImageIcon(getClass().getResource("/images/india.png"));
-//        australia = new ImageIcon(getClass().getResource("/images/australia.png"));
-//        china = new ImageIcon(getClass().getResource("/images/china.png"));
-//        nz = new ImageIcon(getClass().getResource("/images/newZealand.png"));
-//        russia = new ImageIcon(getClass().getResource("/images/russia.png"));
 
-        india = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\india.png");
-        australia = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\australia.png");
-        china = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\china.png");
-        nz = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\newZealand.png");
-        russia = new ImageIcon(System.getProperty("user.dir")+ System.getProperty("file.separator") + "\\Images\\russia.png");
+        URL url = this.getClass().getResource("Images/india.png");
+        JOptionPane.showMessageDialog(null,url);
+        india = new ImageIcon(url);
+
+
+        australia = new ImageIcon(getClass().getResource("Images/australia.png"));
+        china = new ImageIcon(getClass().getResource("Images/china.png"));
+        nz = new ImageIcon(getClass().getResource("Images/newZealand.png"));
+        russia = new ImageIcon(getClass().getResource("Images/russia.png"));
 
         //region CloseOperation
+
         // Set Closing Operation and add listener to open a confirmation window.
         setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
@@ -76,6 +78,7 @@ public class FlagsGuiPage extends JFrame implements ActionListener {
     }
     //endregion
 
+
     //region ActiveListener
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -99,17 +102,17 @@ public class FlagsGuiPage extends JFrame implements ActionListener {
             Close();
         }
     }
-    //endregion
+//endregion
 
-    //region SwapLabel
-    private void SwapLabelIcon(JLabel label, ImageIcon newIcon, String newText)
-    {
-        // Resize image to fit label
-        Image image = newIcon.getImage().getScaledInstance(label.getWidth(),label.getHeight(), Image.SCALE_SMOOTH);
-        // Set label image
-        label.setIcon(new ImageIcon(image));
-        label.setText(newText);
-    }
+//region SwapLabel
+private void SwapLabelIcon(JLabel label, ImageIcon newIcon, String countryText)
+{
+    // Resize image to fit label
+    Image image = newIcon.getImage().getScaledInstance(label.getWidth(),label.getHeight(), Image.SCALE_SMOOTH);
+    // Set label image
+    label.setIcon(new ImageIcon(image));
+    countyName.setText(countryText);
+}
     //endregion
 
     //region Utils
@@ -119,4 +122,5 @@ public class FlagsGuiPage extends JFrame implements ActionListener {
         this.dispose();
     }
     //endregion
+
 }

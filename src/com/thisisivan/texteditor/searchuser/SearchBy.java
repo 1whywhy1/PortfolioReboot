@@ -1,4 +1,4 @@
-package com.thisisivan.searchuser;
+package com.thisisivan.texteditor.searchuser;
 
 public enum SearchBy {
     id,

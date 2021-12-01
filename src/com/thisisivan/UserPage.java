@@ -1,6 +1,6 @@
 package com.thisisivan;
 
-import com.thisisivan.searchuser.SearchBy;
+import com.thisisivan.texteditor.searchuser.SearchBy;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -9,6 +9,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class UserPage extends JFrame implements ActionListener{
 
@@ -35,6 +37,14 @@ public class UserPage extends JFrame implements ActionListener{
     private ArrayList<JComponent> fields;
     private WelcomePage welcomePage;
     private User user;
+    public static Logger logger;
+    //endregion
+
+    //region Set up logger
+    static {
+        logger = MyLogger.SetupLogger("NewUserLog", System.getProperty("user.dir")
+                + System.getProperty("file.separator") + "\\Logs\\NewUserLog.log");
+    }
     //endregion
 
     //region Constructors
@@ -98,11 +108,7 @@ public class UserPage extends JFrame implements ActionListener{
     public UserPage(WelcomePage welcomePage, String username)
     {
         this(welcomePage);
-        System.out.println("works");
-        System.out.println("fields 2 is " + fields.size());
         EnableFields(fields,true);
-        System.out.println("works2");
-        this.setTitle("Profile");
         registerButton.setVisible(false);
         saveButton.setVisible(false);
         editButton.setVisible(true);
@@ -146,6 +152,7 @@ public class UserPage extends JFrame implements ActionListener{
         catch (Exception e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error: " + e.getCause(), JOptionPane.ERROR_MESSAGE);
+            logger.log(Level.WARNING,e.getMessage(),e);
         }
     }
     //endregion

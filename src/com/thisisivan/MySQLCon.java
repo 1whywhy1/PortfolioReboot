@@ -1,7 +1,7 @@
 package com.thisisivan;
 
-import com.thisisivan.searchuser.SearchBy;
-import com.thisisivan.searchuser.SearchForEdit;
+import com.thisisivan.texteditor.searchuser.SearchBy;
+import com.thisisivan.texteditor.searchuser.SearchForEdit;
 
 import javax.swing.*;
 import java.sql.*;

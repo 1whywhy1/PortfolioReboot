@@ -48,6 +48,7 @@ public class StackForm extends JFrame implements IStackPrinter{
         //endregion
 
         startButton.addActionListener(e->StartDemo());
+        backButton.addActionListener(e->Close());
 
         this.setTitle("Registration Form");
         this.setContentPane(mainPane);

@@ -1,9 +1,8 @@
-package com.thisisivan.searchuser;
+package com.thisisivan.texteditor.searchuser;
 
 import com.thisisivan.*;
 
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -13,7 +12,6 @@ import java.sql.ResultSet;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.logging.Level;
 
 public class EditDeleteUserForm extends JFrame {

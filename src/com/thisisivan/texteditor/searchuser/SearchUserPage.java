@@ -1,4 +1,4 @@
-package com.thisisivan.searchuser;
+package com.thisisivan.texteditor.searchuser;
 
 import com.thisisivan.*;
 
@@ -9,7 +9,6 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.sql.ResultSet;
-import java.util.Locale;
 
 public class SearchUserPage extends JFrame{
     //region Variables

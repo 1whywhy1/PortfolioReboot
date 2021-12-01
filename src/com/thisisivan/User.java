@@ -1,15 +1,8 @@
 package com.thisisivan;
 
-import com.thisisivan.searchuser.SearchBy;
-import com.thisisivan.searchuser.SearchForEdit;
+import com.thisisivan.texteditor.searchuser.SearchBy;
+import com.thisisivan.texteditor.searchuser.SearchForEdit;
 
-import javax.swing.*;
-import java.io.Serializable;
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 import java.util.zip.DataFormatException;
 
 public class User extends Credentials{

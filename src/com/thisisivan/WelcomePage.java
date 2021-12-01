@@ -1,17 +1,15 @@
 package com.thisisivan;
 
 import com.thisisivan.fileprocessingandpolimorphism.*;
-import com.thisisivan.flagdisplay.FlagsGuiPage;
-import com.thisisivan.searchuser.EditDeleteUserForm;
-import com.thisisivan.searchuser.SearchUserPage;
+import com.thisisivan.flagdisplay.FlagsGuiReboot;
+import com.thisisivan.texteditor.searchuser.EditDeleteUserForm;
+import com.thisisivan.texteditor.searchuser.SearchUserPage;
 import com.thisisivan.serialization.SerializationForm;
 import com.thisisivan.stack.StackForm;
 import com.thisisivan.texteditor.EditorJFrame;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class WelcomePage extends JFrame{
     //region Variables
@@ -103,7 +101,7 @@ public class WelcomePage extends JFrame{
     //region Open Flags Image Processing
     private void OpenFlagsOfTheWorld()
     {
-        FlagsGuiPage flagsGuiPage = new FlagsGuiPage(this);
+        FlagsGuiReboot flagsGuiReboot = new FlagsGuiReboot(this);
         this.setVisible(false);
     }
     //endregion
